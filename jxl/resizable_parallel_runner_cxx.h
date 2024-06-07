@@ -3,11 +3,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-/// @addtogroup libjxl_threads
-/// @{
-///
 /// @file resizable_parallel_runner_cxx.h
-/// @ingroup libjxl_threads
 /// @brief C++ header-only helper for @ref resizable_parallel_runner.h.
 ///
 /// There's no binary library associated with the header since this is a header
@@ -50,6 +46,7 @@ typedef std::unique_ptr<void, JxlResizableParallelRunnerDestroyStruct>
 ///
 /// @param memory_manager custom allocator function. It may be NULL. The memory
 ///        manager will be copied internally.
+/// @param num_worker_threads the number of worker threads to create.
 /// @return a @c NULL JxlResizableParallelRunnerPtr if the instance can not be
 /// allocated or initialized
 /// @return initialized JxlResizableParallelRunnerPtr instance otherwise.
@@ -60,5 +57,3 @@ static inline JxlResizableParallelRunnerPtr JxlResizableParallelRunnerMake(
 }
 
 #endif  // JXL_RESIZABLE_PARALLEL_RUNNER_CXX_H_
-
-/// @}
