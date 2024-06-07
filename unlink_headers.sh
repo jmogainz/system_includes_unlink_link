@@ -43,6 +43,7 @@ done
 # Ensure the path is not empty and exists
 if [[ -z "$SYSTEM_HEADERS_PATH" ]] || [[ ! -d "$SYSTEM_HEADERS_PATH" ]]; then
     echo "Error: Invalid path ($SYSTEM_HEADERS_PATH)." >&2
+    echo "Usage: $0 --path /path/to/system_headers" >&2
     exit 1
 fi
 
